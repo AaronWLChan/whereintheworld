@@ -4,9 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import store from './redux/store'
+import { Provider } from 'react-redux'
+import { getCountries } from './redux/countrySlice'
+import { BrowserRouter } from 'react-router-dom'
+
+
+//Get Countries (to be used throughout app), This works
+store.dispatch(getCountries())
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
