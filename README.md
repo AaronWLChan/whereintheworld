@@ -1,5 +1,5 @@
 # Where in the world
 
-FrontEnd Monitor Challenge
+REST Countries API Frontend Mentor Challenge
 
 React + Redux + TailwindCSS
